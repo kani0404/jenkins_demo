@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'YEAR', defaultValue: '2003', description: 'Enter Birth Year')
+    }
+
     stages {
 
         stage('Compile Java Program') {
@@ -11,7 +15,7 @@ pipeline {
 
         stage('Run Program') {
             steps {
-                bat 'java AgeCalculator 2003'
+                bat "java AgeCalculator %YEAR%"
             }
         }
 
