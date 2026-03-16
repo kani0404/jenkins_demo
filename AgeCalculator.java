@@ -2,7 +2,8 @@ import java.time.Year;
 
 public class AgeCalculator {
     public static void main(String[] args) {
-        int birthYear = 2002;
+
+        int birthYear = Integer.parseInt(args[0]);
         int currentYear = Year.now().getValue();
 
         int age = currentYear - birthYear;
