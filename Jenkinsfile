@@ -5,19 +5,19 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/kani0404/jenkins_demo.git'
+                git branch: 'main', url: 'https://github.com/kani0404/jenkins_demo.git'
             }
         }
 
         stage('Compile Java Program') {
             steps {
-                sh 'javac AgeCalculator.java'
+                bat 'javac AgeCalculator.java'
             }
         }
 
         stage('Run Program') {
             steps {
-                sh 'java AgeCalculator'
+                bat 'java AgeCalculator'
             }
         }
 
