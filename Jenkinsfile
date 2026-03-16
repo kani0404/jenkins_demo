@@ -11,10 +11,9 @@ pipeline {
 
         stage('Run Program') {
             steps {
-                bat 'java AgeCalculator'
+                bat 'java AgeCalculator 2003'
             }
         }
-
 
     }
 }
