@@ -4,4 +4,4 @@ steps:
   - type: Command
     name: Run Python Script
     command: |
-      python3 app.py
+      python3 hello.py
