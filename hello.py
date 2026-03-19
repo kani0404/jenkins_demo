@@ -1,0 +1,1 @@
+print("Hello from OCI DevOps CI Pipeline 🚀")
