@@ -1,23 +1,12 @@
 pipeline {
     agent any
 
-    parameters {
-        string(name: 'YEAR', defaultValue: '2003', description: 'Enter Birth Year')
-    }
-
     stages {
 
-        stage('Compile Java Program') {
+        stage('Run Python Script') {
             steps {
-                bat 'javac AgeCalculator.java'
+                sh 'python3 calculator.py'
             }
         }
-
-        stage('Run Program') {
-            steps {
-                bat "java AgeCalculator %YEAR%"
-            }
-        }
-
     }
 }
